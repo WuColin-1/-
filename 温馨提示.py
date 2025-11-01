@@ -8,12 +8,12 @@ screem_w=root.winfo_screenwidth()
 screem_v=root.winfo_screenheight()
 
 
-root.geometry(f"300x150+{math.floor(screem_w/2)}+{math.floor(screem_v/2)}")
-root.title("退出提示")
+root.geometry(f"500x150+{math.floor(screem_w/2)}+{math.floor(screem_v/2)}")
+root.title("quit tips")
 root.config(bg="skyblue")
 label=tk.Label(
     root,
-    text="按esc结束程序",
+    text="press Esc to quit the programm",
     font=("Arial", 30), 
     fg="black",
     bg="skyblue"
@@ -21,26 +21,25 @@ label=tk.Label(
 )
 label.pack(expand=True)
 messages = [
-    "累了吗？休息一下",
-    "深呼吸，让自己放松",
-    "今天也要保持微笑",
-    "喝杯热茶，让自己暖和",
-    "不要太逼自己，慢慢来",
-    "小小休息也很重要",
-    "记得抬头看看窗外",
-    "好好吃午餐哦",
-    "给自己一点奖励吧",
-    "天气冷了，多穿点衣服",
-    "晚上早点睡，明天更精神",
-    "保持好心情，事情会更顺利",
-    "你很棒，不要忘记赞美自己",
-    "照顾好自己，也照顾心情",
-    "别忘了喝水，多补充能量",
-    "适当放空，让自己轻松",
-
+    "Tired? Have a rest",
+    "Take a deep breath and relax",
+    "Keep smiling today",
+    "Have a cup of warm tea to feel cozy",
+    "Don't push yourself too hard, take it easy",
+    "Even a short break is important",
+    "Remember to look up and enjoy the view outside",
+    "Have a good lunch",
+    "Give yourself a small reward",
+    "It's cold, wear some extra clothes",
+    "Go to bed early tonight to feel refreshed tomorrow",
+    "Maintain a good mood, things will go smoother",
+    "You are great, don't forget to praise yourself",
+    "Take care of yourself and your mood",
+    "Don't forget to drink water and stay hydrated",
+    "Take some time to relax and unwind",
 ]
 color = [
-    # 经典暖色系
+    # Classic warm colors
     "#FFE4E1",  # MistyRose
     "#FFDAB9",  # PeachPuff
     "#FFA07A",  # LightSalmon
@@ -48,20 +47,20 @@ color = [
     "#FFE4B5",  # Moccasin
     "#F5DEB3",  # Wheat
 
-    # 淡暖中性色
+    # Light warm neutral colors
     "#FFEBCD",  # BlanchedAlmond
     "#FFEFD5",  # PapayaWhip
     "#FFE4C4",  # Bisque
     "#FFDEAD",  # NavajoWhite
     "#FAFAD2",  # LightGoldenrod
 
-    # 梦幻暖粉系
+    # Dreamy warm pink colors
     "#FFB6C1",  # LightPink
     "#D8BFD8",  # Thistle
     "#DDA0DD",  # Plum
     "#FFF0F5",  # LavenderBlush
 
-    # 活力暖橙系
+    # Energetic warm orange colors
     "#FF7F50",  # Coral
     "#FA8072",  # Salmon
     "#F4A460",  # SandyBrown
@@ -75,9 +74,9 @@ def on_key_press(event):
 root.bind("<Key>",on_key_press)
 
 def show_window(index=0):
-    win = tk.Toplevel()                 # 创建新窗口
-    win.title(f"温馨提示")
-    win.geometry(f"300x150+{random.randint(0,screem_w)}+{random.randint(0,screem_v)}")  # 让窗口错位显示
+    win = tk.Toplevel()                 # Create a new window
+    win.title(f"Tip")
+    win.geometry(f"600x200+{random.randint(0,screem_w)}+{random.randint(0,screem_v)}")  # Offset window display
     color_code=random.randint(0,len(color)-1)
     text_code=random.randint(0,len(messages)-1)
     win.config(bg=f"{color[color_code]}")
@@ -85,9 +84,9 @@ def show_window(index=0):
     label = tk.Label(win, text=messages[text_code], font=("Arial", 25), fg="black", bg=f"{color[color_code]}")
     label.pack(expand=True)
     
-    # 2秒后显示下一个窗口
+    # Show the next window after 2 seconds
     root.after(500, show_window, index + 1)
 
-# 开始显示第一个窗口
+# Start showing the first window
 show_window()
 root.mainloop()
