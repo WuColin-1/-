@@ -73,7 +73,7 @@ def on_key_press(event):
     if event.keysym=="Escape":
         root.destroy()
 root.bind("<Key>",on_key_press)
-
+ 
 
 
 def show_window(index=0):
