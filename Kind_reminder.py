@@ -1,6 +1,5 @@
 import tkinter as tk
 import random 
-import math
 
 root = tk.Tk()
 
@@ -8,7 +7,7 @@ screem_w=root.winfo_screenwidth()
 screem_v=root.winfo_screenheight()
 
 
-root.geometry(f"500x150+{math.floor(screem_w/2)}+{math.floor(screem_v/2)}")
+root.geometry(f"500x150+{int(screem_w/2)}+{int(screem_v/2)}")
 root.title("quit tips")
 root.config(bg="skyblue")
 label=tk.Label(
