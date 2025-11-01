@@ -26,8 +26,8 @@ It is built with **Python** and **Tkinter**, and works on both Windows and macOS
   ```
 
 ## Another appraoch
-- If you want to download executable file from release, please be sure that your computer is under macOS
-- After downloading, try open the file. If failed.
+- If you want to download a compressed executable file from release, please be sure that your computer is under macOS
+- After downloading, depress the file, try to open it. If failed.
   ![image error](images/Screenshot%202025-11-01%20at%2021.44.39.png)
 - Go to System Setting -> Privacy & Security.
 - Turn to the bottom, and you will find a privacy warnning. Choose "Open Anyway"
