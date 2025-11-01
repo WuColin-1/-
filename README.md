@@ -16,6 +16,7 @@ It is built with **Python** and **Tkinter**, and works on both Windows and macOS
 
 ## Packages required
 - random
+- tkinter (you might not be requied to donwload this package because python include it directly)
   # downlaod the package through pip
   ```bash
   pip install random
